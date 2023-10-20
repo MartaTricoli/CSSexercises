@@ -4,7 +4,7 @@
     border: border-box;
 }
 body {
-    background-color: black;
+    background-color: #000000;
 }
 nav {
     block-size: 100%;
@@ -16,7 +16,8 @@ nav {
     padding: 10px 8px 10px 8px;
     align-items: center;
 }
-.navbar {
+.navbar,
+nav > .navbar.left > .dropdown {
     display: inline-block;
 }
 .navbar > div {
@@ -26,7 +27,9 @@ nav {
     margin: 8px;
 }
 nav > .navbar.left > div:first-child,
-nav > .navbar.left > div:nth-child(2) > a {
+nav > .navbar.left > div:nth-child(2) > a,
+nav > .navbar.left > .dropdown > .dropdown-content > a,
+nav > .navbar.right > div > button:hover {
     color: #fffefe;
 }
 nav > .navbar.left > div:first-child {
@@ -36,17 +39,20 @@ nav > .navbar.left > div > a,
 nav > .navbar.left > div > button {
     font-size: medium;
 }
-a {
+nav a {
     text-decoration: none;
 }
-nav, button {
+nav,
+button,
+nav > .navbar.left > .dropdown > .dropdown-content {
     background-color:  #21252a;
 }
 nav > .navbar.left > div > button {
     border: none;
 }
 nav > .navbar.left > div > button,
-nav > .navbar.left > div:nth-child(3) > a {
+nav > .navbar.left > div:nth-child(3) > a,
+nav > .navbar.left > .dropdown > .dropdown-content > a {
     color: #9a9c9e;
 }
 nav > .navbar.left > div:last-child > a {
@@ -68,6 +74,21 @@ nav > .navbar.right > div > button {
 }
 nav > .navbar.right > div > button:hover {
     background-color: #188754;
-    color: #fffefe;
+}
+nav > .navbar.left > .dropdown {
+    position: relative;
+}
+nav > .navbar.left > .dropdown > .dropdown-content {
+    display: none;
+    position: absolute;
+}
+nav > .navbar.left > .dropdown > .dropdown-content > a {
+    display: block;
+    padding: 2px 23px 2px 23px;
+    width: 100%;
+}
+nav > .navbar.left > .dropdown:hover .dropdown-content {
+    display: block;
 }
 
+/*esercizio svolto in pair insieme a Matteo Petrucci*/
