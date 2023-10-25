@@ -1,4 +1,4 @@
-body {
+body { /*ho modificato il css direttamente da qui, il file start.css è vuoto*/
   width: 60em;
   margin: 0 auto;
   display: flex;
