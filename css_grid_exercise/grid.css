@@ -24,7 +24,8 @@ body {
 }
 .calculator div {
     text-align: center;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 .calculator > #result {
