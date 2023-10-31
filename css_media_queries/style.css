@@ -4,8 +4,8 @@
     box-sizing: content-box;
 }
 body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-evenly;
     padding-top: 10px;
 }
 .card {
@@ -82,18 +82,15 @@ body {
 }
 @media (max-width: 768px) {
     body {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
     };
 }
 @media (max-width: 375px) {
     body {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     };
 }
 /*pair programmaing: Emilio Lenglet*/
-/*per le macchine per ora c'è questo:
-- Bertuzzo: Francesco, Benedetta + 3 posti,
-Pietro, Tuniz e Costa in forse,
-- Giva + 3 posti, partenza 18:30,
--Gioele + 3 posti, partenza 19.30,
-Cristina + 5/7 posti a seconda dei bagagli, partenza 18:30*/
+
